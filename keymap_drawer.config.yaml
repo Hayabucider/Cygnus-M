@@ -1,0 +1,3 @@
+parse_config:
+  qmk_keyboard: Cygnus
+  qmk_layout: default_layout
