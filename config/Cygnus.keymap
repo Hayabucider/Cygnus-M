@@ -15,7 +15,7 @@
 //  L10  Management
 //
 // Bottom-row positions (pos41–51) — sequential order:
-//   41  LCTL   | 42  LGUI/LALT  | 43  LALT/LGUI  | 44  LT(8,LANG2)  <- 英数tap / L8hold
+//   41  LCTL   | 42  LGUI/LALT  | 43  LALT/LGUI  | 44  L8_LT(8,LANG2)  <- 英数tap / L8hold
 //   45  MT(alt,LANG1) <- かなtap / Althold
 //   46  LT(sub,SPC)   <- Spacetap / Subレイヤーhold
 //   47  RIGHT(->)
@@ -27,7 +27,7 @@
 //     ※ lt8-L（右手Lキー）および lt8-BSPC は廃止済み
 //   L9アクセス: pos49 RET長押し（右サム）+ pos25 MINUS長押しの2経路
 //   pos46: 絶対に &mo 系にしないこと（bootloaderアクセス可能になるバグ）
-//   pos44: &mt LCTL LANG2 → &lt 8 LANG2 に変更（Ctrl冗長のため）
+//   pos44: &mt LCTL LANG2 → &l8_lt 8 LANG2 に変更（Ctrl冗長解消 + L8長押し安定化）
 //   pos48: &lt 8 BSPC → &kp BSPC に変更（L8経路廃止）
 //   pos24: &lt 8 L → &kp L に変更（エルゴルール違反解消）
 // ============================================================
@@ -77,7 +77,7 @@
 
         // ============================================================
         // L0: Windows Base
-        //   pos44 = LT(8, LANG2) : tap=英数  hold=L8(SymNum)
+        //   pos44 = L8_LT(8, LANG2) : tap=英数  hold=L8(SymNum)
         //   pos45 = MT(LALT, LANG1) : tap=かな  hold=Alt
         //   pos46 = LT(1, SPACE)    : tap=Space hold=Win shortcuts
         // ============================================================
@@ -116,7 +116,7 @@
         // ============================================================
         // L2: Mac Base
         //   col1/col2 = LALT/LGUI (Mac 配列)
-        //   pos44 = LT(8, LANG2) : tap=英数  hold=L8(SymNum)
+        //   pos44 = L8_LT(8, LANG2) : tap=英数  hold=L8(SymNum)
         //   pos45 = MT(LALT, LANG1) : tap=かな  hold=Option
         //   pos46 = LT(3, SPACE)    : tap=Space hold=Mac shortcuts
         // ============================================================
