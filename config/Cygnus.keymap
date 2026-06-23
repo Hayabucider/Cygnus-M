@@ -33,6 +33,17 @@
 // ============================================================
 
 / {
+    behaviors {
+        l8_lt: l8_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+            display-name = "L8 Layer-Tap";
+        };
+    };
+
     macros {
         // OS切り替え ＆ Bluetooth 自動接続マクロ
         win_switch: win_switch {
@@ -75,7 +86,7 @@
                 &lt 10 ESC  &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
                 &kp TAB     &kp A      &kp S      &kp D      &kp F      &kp G   &mkp MCLK  &kp UP     &kp H      &kp J      &kp K      &kp L      &lt 9 MINUS  &kp RET
                 &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B   &kp DEL    &kp DOWN   &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT
-                &kp LCTL    &kp LGUI   &kp LALT   &lt 8 LANG2   &mt LALT LANG1   &lt 1 SPACE   &kp RIGHT   &kp BSPC   &lt 9 RET   &kp DEL   &kp RCTL
+                &kp LCTL    &kp LGUI   &kp LALT   &l8_lt 8 LANG2   &mt LALT LANG1   &lt 1 SPACE   &kp RIGHT   &kp BSPC   &lt 9 RET   &kp DEL   &kp RCTL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -114,7 +125,7 @@
                 &lt 10 ESC  &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
                 &kp TAB     &kp A      &kp S      &kp D      &kp F      &kp G   &mkp MCLK  &kp UP     &kp H      &kp J      &kp K      &kp L      &lt 9 MINUS  &kp RET
                 &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B   &kp DEL    &kp DOWN   &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT
-                &kp LCTL    &kp LALT   &kp LGUI   &lt 8 LANG2   &mt LALT LANG1   &lt 3 SPACE   &kp RIGHT   &kp BSPC   &lt 9 RET   &kp DEL   &kp RCTL
+                &kp LCTL    &kp LALT   &kp LGUI   &l8_lt 8 LANG2   &mt LALT LANG1   &lt 3 SPACE   &kp RIGHT   &kp BSPC   &lt 9 RET   &kp DEL   &kp RCTL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -149,7 +160,7 @@
                 &lt 10 ESC  &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
                 &kp TAB     &kp A      &kp S      &kp D      &kp F      &kp G   &mkp MCLK  &kp UP     &kp H      &kp J      &kp K      &kp L      &lt 9 MINUS  &kp RET
                 &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B   &kp DEL    &kp DOWN   &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT
-                &kp LCTL    &kp LGUI   &kp LALT   &lt 8 LANG2   &mt LALT LANG1   &lt 5 SPACE   &kp RIGHT   &kp BSPC   &lt 9 RET   &kp DEL   &kp RCTL
+                &kp LCTL    &kp LGUI   &kp LALT   &l8_lt 8 LANG2   &mt LALT LANG1   &lt 5 SPACE   &kp RIGHT   &kp BSPC   &lt 9 RET   &kp DEL   &kp RCTL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -186,7 +197,7 @@
                 &lt 10 ESC  &kp Q      &kp W      &kp E      &kp R      &kp T              &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
                 &kp TAB     &kp A      &kp S      &kp D      &kp F      &kp G   &mkp MCLK  &kp UP     &kp H      &kp J      &kp K      &kp L      &lt 9 MINUS  &kp RET
                 &kp LSHFT   &kp Z      &kp X      &kp C      &kp V      &kp B   &kp DEL    &kp DOWN   &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH     &kp RSHFT
-                &kp LCTL    &kp LALT   &kp LGUI   &lt 8 LANG2   &mt LALT LANG1   &lt 7 SPACE   &kp RIGHT   &kp BSPC   &lt 9 RET   &kp DEL   &kp RCTL
+                &kp LCTL    &kp LALT   &kp LGUI   &l8_lt 8 LANG2   &mt LALT LANG1   &lt 7 SPACE   &kp RIGHT   &kp BSPC   &lt 9 RET   &kp DEL   &kp RCTL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
