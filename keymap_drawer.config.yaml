@@ -1,3 +1,17 @@
-parse_config:
-  qmk_keyboard: Cygnus
-  qmk_layout: default_layout
+name: Draw Keymap
+
+on:
+  push:
+    paths:
+      - "config/*.keymap"
+  workflow_dispatch:
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    with:
+      config_path: config
+      output_folder: keymap-drawer
+      destination: commit
+      extra_parse_args: "Cygnus: '-z config/Cygnus.keymap'"
+    secrets: inherit
