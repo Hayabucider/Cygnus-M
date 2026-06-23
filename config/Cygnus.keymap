@@ -250,14 +250,22 @@
         //   左手 = 記号  右手 = テンキー
         //   pos49 (右サム隣) = 0  ← トラックボール使用中も 0 入力可
         //   OS側が日本語/JIS配列の前提
+        //   L8 intended output on JIS:
+        //   Row1: ! ` [ ] " '   * 7 8 9 /
+        //   Row2: ? # ( ) - =   + 4 5 6 -
+        //   Row3: ; @ [ ] < >   , 1 2 3 .
+        //   
+        //   Note:
+        //   ZMK keycodes below are physical operations for JIS layout.
+        //   Example: &kp LS(SQT) means Shift + : key, which outputs * on JIS.
         // ============================================================
 
         layer_8 {
             bindings = <
-&kp LS(N1)  &kp GRAVE     &kp LBKT     &kp RBKT   &kp LS(N2)     &kp LS(N7)                  &kp LS(SQT)   &kp N7  &kp N8  &kp N9  &kp FSLH   &trans
-&kp LS(FSLH) &kp LS(N3)   &kp LS(N8)   &kp LS(N9) &kp MINUS      &kp LS(MINUS)  &trans    &kp LS(SEMI) &kp N4  &kp N5  &kp N6  &kp MINUS  &trans  &trans
-&trans      &kp SEMI      &kp RBKT     &kp BSLH   &kp LS(COMMA)  &kp LS(DOT)    &trans    &kp COMMA    &kp N1  &kp N2  &kp N3  &kp DOT    &trans  &trans
-&trans      &trans        &trans       &trans     &trans         &trans         &trans    &trans      &kp N0                             &trans  &trans
+        &kp LS(N1)    &kp LS(LBKT)  &kp RBKT     &kp BSLH      &kp LBKT      &kp LS(N6)                  &kp LS(N2)    &kp N7  &kp N8  &kp N9  &kp FSLH  &none
+        &kp LS(FSLH)  &kp LS(N3)    &kp LS(N8)   &kp LS(N9)    &kp MINUS     &kp LS(MINUS)  &none      &kp LS(SEMI)  &kp N4  &kp N5  &kp N6  &kp MINUS  &none  &none
+        &kp SEMI      &kp BSLH      &kp INT3     &kp LS(COMMA) &kp LS(DOT)   &kp COMMA      &none      &kp N1        &kp N2  &kp N3  &kp DOT  &none      &none  &none
+        &none         &none         &none        &none         &none         &none          &none      &none         &kp N0                         &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
