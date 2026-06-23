@@ -254,7 +254,7 @@
 
         layer_8 {
             bindings = <
-&kp LS(N1)  &kp GRAVE     &kp LBKT     &kp RBKT   &kp LS(N2)     &kp LS(N7)                  &kp LS(SQT)   &kp N7  &kp N8  &kp N9  &kp FSLH   &trans
+&kp A  &kp GRAVE     &kp LBKT     &kp RBKT   &kp LS(N2)     &kp LS(N7)                  &kp LS(SQT)   &kp N7  &kp N8  &kp N9  &kp FSLH   &trans
 &kp LS(FSLH) &kp LS(N3)   &kp LS(N8)   &kp LS(N9) &kp MINUS      &kp LS(MINUS)  &trans    &kp LS(SEMI) &kp N4  &kp N5  &kp N6  &kp MINUS  &trans  &trans
 &trans      &kp SEMI      &kp RBKT     &kp BSLH   &kp LS(COMMA)  &kp LS(DOT)    &trans    &kp COMMA    &kp N1  &kp N2  &kp N3  &kp DOT    &trans  &trans
 &trans      &trans        &trans       &trans     &trans         &trans         &trans    &trans      &kp N0                             &trans  &trans
