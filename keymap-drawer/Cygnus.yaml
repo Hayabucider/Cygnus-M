@@ -417,7 +417,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   '8':
-  - A
+  - Sft+1
   - '`'
   - '['
   - ']'
