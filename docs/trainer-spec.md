@@ -1,4 +1,4 @@
-﻿# Cygnus-M Typing Trainer 莉墓ｧ俶嶌
+# Cygnus-M Typing Trainer 莉墓ｧ俶嶌
 
 > 譛邨よ峩譁ｰ: 2026-06-23  
 > 蟇ｾ雎｡繝輔ぃ繧､繝ｫ: `docs/cygnus_m_typing_trainer.html`  

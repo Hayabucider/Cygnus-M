@@ -1,4 +1,4 @@
-﻿# Cygnus-M Viewer 莉墓ｧ俶嶌
+# Cygnus-M Viewer 莉墓ｧ俶嶌
 
 > 譛邨よ峩譁ｰ: 2026-06-23  
 > 蟇ｾ雎｡繝輔ぃ繧､繝ｫ: `docs/Cygnus-M-viewer.html`  
