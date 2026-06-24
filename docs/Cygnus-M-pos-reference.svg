@@ -1,0 +1,295 @@
+<svg width="929" height="320" viewBox="0 0 929 320" xmlns="http://www.w3.org/2000/svg">
+<style>
+  svg {
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    background: #ffffff;
+  }
+  rect.key {
+    fill: #f0f4ff;
+    stroke: #5a7ab5;
+    stroke-width: 1.5;
+  }
+  text.pos {
+    font-size: 13px;
+    font-weight: bold;
+    fill: #1a3a6b;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+  text.title {
+    font-size: 15px;
+    font-weight: bold;
+    fill: #333;
+    text-anchor: middle;
+  }
+</style>
+
+<!-- Title -->
+<text x="464" y="18" class="title">Cygnus-M — Pos Number Reference (pos0–pos50)</text>
+
+<!-- ======= ROW 1 ======= -->
+<!-- pos0 -->
+<g transform="translate(30, 56)">
+<g transform="translate(28, 62)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">0</text>
+</g>
+<!-- pos1 -->
+<g transform="translate(84, 62)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">1</text>
+</g>
+<!-- pos2 -->
+<g transform="translate(140, 42)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">2</text>
+</g>
+<!-- pos3 -->
+<g transform="translate(196, 28)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">3</text>
+</g>
+<!-- pos4 -->
+<g transform="translate(253, 35)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">4</text>
+</g>
+<!-- pos5 -->
+<g transform="translate(309, 43)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">5</text>
+</g>
+<!-- pos6 -->
+<g transform="translate(560, 43)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">6</text>
+</g>
+<!-- pos7 -->
+<g transform="translate(617, 35)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">7</text>
+</g>
+<!-- pos8 -->
+<g transform="translate(673, 28)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">8</text>
+</g>
+<!-- pos9 -->
+<g transform="translate(729, 42)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">9</text>
+</g>
+<!-- pos10 -->
+<g transform="translate(785, 63)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">10</text>
+</g>
+<!-- pos11 -->
+<g transform="translate(841, 63)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">11</text>
+</g>
+
+<!-- ======= ROW 2 ======= -->
+<!-- pos12 -->
+<g transform="translate(28, 119)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">12</text>
+</g>
+<!-- pos13 -->
+<g transform="translate(84, 119)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">13</text>
+</g>
+<!-- pos14 -->
+<g transform="translate(140, 98)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">14</text>
+</g>
+<!-- pos15 -->
+<g transform="translate(196, 84)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">15</text>
+</g>
+<!-- pos16 -->
+<g transform="translate(253, 92)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">16</text>
+</g>
+<!-- pos17 -->
+<g transform="translate(309, 99)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">17</text>
+</g>
+<!-- pos18 -->
+<g transform="translate(365, 112)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">18</text>
+</g>
+<!-- pos19 -->
+<g transform="translate(504, 112)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">19</text>
+</g>
+<!-- pos20 -->
+<g transform="translate(560, 99)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">20</text>
+</g>
+<!-- pos21 -->
+<g transform="translate(617, 92)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">21</text>
+</g>
+<!-- pos22 -->
+<g transform="translate(673, 84)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">22</text>
+</g>
+<!-- pos23 -->
+<g transform="translate(729, 98)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">23</text>
+</g>
+<!-- pos24 -->
+<g transform="translate(785, 119)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">24</text>
+</g>
+<!-- pos25 -->
+<g transform="translate(841, 119)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">25</text>
+</g>
+
+<!-- ======= ROW 3 ======= -->
+<!-- pos26 -->
+<g transform="translate(28, 175)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">26</text>
+</g>
+<!-- pos27 -->
+<g transform="translate(84, 175)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">27</text>
+</g>
+<!-- pos28 -->
+<g transform="translate(140, 154)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">28</text>
+</g>
+<!-- pos29 -->
+<g transform="translate(196, 140)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">29</text>
+</g>
+<!-- pos30 -->
+<g transform="translate(253, 148)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">30</text>
+</g>
+<!-- pos31 -->
+<g transform="translate(309, 155)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">31</text>
+</g>
+<!-- pos32 -->
+<g transform="translate(365, 168)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">32</text>
+</g>
+<!-- pos33 -->
+<g transform="translate(504, 168)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">33</text>
+</g>
+<!-- pos34 -->
+<g transform="translate(560, 155)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">34</text>
+</g>
+<!-- pos35 -->
+<g transform="translate(617, 148)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">35</text>
+</g>
+<!-- pos36 -->
+<g transform="translate(673, 140)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">36</text>
+</g>
+<!-- pos37 -->
+<g transform="translate(729, 154)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">37</text>
+</g>
+<!-- pos38 -->
+<g transform="translate(785, 175)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">38</text>
+</g>
+<!-- pos39 -->
+<g transform="translate(841, 175)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">39</text>
+</g>
+
+<!-- ======= ROW 4 (thumb cluster) ======= -->
+<!-- pos40 -->
+<g transform="translate(28, 231)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">40</text>
+</g>
+<!-- pos41 -->
+<g transform="translate(84, 231)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">41</text>
+</g>
+<!-- pos42 -->
+<g transform="translate(140, 210)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">42</text>
+</g>
+<!-- pos43 -->
+<g transform="translate(196, 196)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">43</text>
+</g>
+<!-- pos44 -->
+<g transform="translate(264, 225)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">44</text>
+</g>
+<!-- pos45 -->
+<g transform="translate(327, 231) rotate(9.0)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">45</text>
+</g>
+<!-- pos46 -->
+<g transform="translate(389, 247) rotate(20.0)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">46</text>
+</g>
+<!-- pos47 -->
+<g transform="translate(479, 247) rotate(-20.0)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">47</text>
+</g>
+<!-- pos48 -->
+<g transform="translate(541, 230) rotate(-10.0)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">48</text>
+</g>
+<!-- pos49 -->
+<g transform="translate(785, 231)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">49</text>
+</g>
+<!-- pos50 -->
+<g transform="translate(841, 231)">
+  <rect rx="5" ry="5" x="-24" y="-24" width="48" height="48" class="key"/>
+  <text x="0" y="0" class="pos">50</text>
+</g>
+
+</g>
+</svg>
