@@ -2,7 +2,7 @@
 
 > 最終更新: 2026-06-23  
 > 対象ファイル: `docs/cygnus_m_typing_trainer.html`  
-> 正典ファイル: `config/Cygnus-M.keymap`
+> 正典ファイル: `config/Cygnus.keymap`
 
 ---
 
@@ -10,7 +10,7 @@
 
 ```
 このTyping Trainer は、Cygnus-M の独自キーマップを身体に覚えさせるための練習ツールである。
-正典はあくまで config/Cygnus-M.keymap であり、Trainer は正典ではない。
+正典はあくまで config/Cygnus.keymap であり、Trainer は正典ではない。
 Trainer はデザイン成果物ではなく、キーマップ習得のための補助ツールである。
 ```
 
@@ -24,7 +24,7 @@ Trainer はデザイン成果物ではなく、キーマップ習得のための
 このプロジェクトのファイルは以下の順で派生している。
 
 ```
-config/Cygnus-M.keymap          ← 唯一の正典
+config/Cygnus.keymap          ← 唯一の正典
         ↓ キー配置・レイヤー定義を継承
 docs/Cygnus-M-viewer.html       ← 正典の可視化ツール（第1世代派生）
         ↓ キー配置・レイヤー定義・UIを継承
@@ -33,7 +33,7 @@ docs/cygnus_m_typing_trainer.html ← 練習ツール（第2世代派生）
 
 **重要な原則:**
 
-- Trainer のキー配置・レイヤー構成は `config/Cygnus-M.keymap` を正典とする
+- Trainer のキー配置・レイヤー構成は `config/Cygnus.keymap` を正典とする
 - Viewer と Trainer の間に矛盾が生じた場合、keymap を正として両方を修正する
 - Trainer だけを根拠に keymap や Viewer を修正しない
 
@@ -43,7 +43,7 @@ docs/cygnus_m_typing_trainer.html ← 練習ツール（第2世代派生）
 
 ### フェーズ1: キーマップ構築（Claude / Gemini / ChatGPT）
 
-`config/Cygnus-M.keymap` をメインの開発対象として、ZMK firmware 向けの11レイヤーキーマップを構築した。複数AIによる設計レビュー・修正・検証を経て確定。
+`config/Cygnus.keymap` をメインの開発対象として、ZMK firmware 向けの11レイヤーキーマップを構築した。複数AIによる設計レビュー・修正・検証を経て確定。
 
 ### フェーズ2: Viewer 開発（Claude）
 
@@ -215,7 +215,7 @@ makeTarget(
 ## 他AIへの依頼時の必須指示文
 
 ```
-このプロジェクトでは config/Cygnus-M.keymap を唯一の正典として扱います。
+このプロジェクトでは config/Cygnus.keymap を唯一の正典として扱います。
 docs/cygnus_m_typing_trainer.html はキーマップ習得のための練習ツールであり、正典ではありません。
 
 Trainer を修正する場合は docs/trainer-spec.md の方針に従い、以下を守ってください。
