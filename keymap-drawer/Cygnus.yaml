@@ -538,8 +538,8 @@ layers:
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
   - BT CLR
-  - {t: ▽, type: trans}
   - '&win_switch'
   - '&mac_switch'
   - '&and_switch'
