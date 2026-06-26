@@ -15,22 +15,24 @@
 //   L8  SymNum         L9  Nav/Func
 //  L10  Management
 //
-// Bottom-row positions (pos41–51) — sequential order:
-//   41  LCTL   | 42  LGUI/LALT  | 43  LALT/LGUI  | 44  L8_LT(8,LANG2)  <- 英数tap / L8hold
-//   45  MT(alt,LANG1) <- かなtap / Althold
-//   46  LT(sub,SPC)   <- Spacetap / Subレイヤーhold
-//   47  RIGHT(->)
-//   48  BSPC          | 49  LT(9,RET) <- Entertap / L9hold
-//   50  DEL    | 51  RCTL
+// Bottom-row positions (pos40–50) — sequential order:
+//   40  LCTL   | 41  LGUI/LALT  | 42  LALT/LGUI  | 43  LANG2  <- 英数tap（L8アクセスなし）
+//   44  L8_LT(8,LANG1) <- かなtap / L8hold  ※ 旧pos43から移動
+//   45  LT(sub,SPC)   <- Spacetap / Subレイヤーhold
+//   46  RIGHT(->)
+//   47  BSPC          | 48  LT(9,RET) <- Entertap / L9hold
+//   49  DEL    | 50  RCTL
 //
-// 設計確定事項（2026-06-22-23）:
-//   L8アクセス: pos44 LANG2長押し（左サム）のみ <- エルゴルール準拠
+// 設計確定事項（2026-06-26更新）:
+//   L8アクセス: pos44 LANG1長押し（左サム）のみ <- エルゴルール準拠
+//     ※ pos43(LANG2)からpos44(LANG1)へ移動（押しやすさ改善）
 //     ※ lt8-L（右手Lキー）および lt8-BSPC は廃止済み
-//   L9アクセス: pos49 RET長押し（右サム）+ pos25 MINUS長押しの2経路
-//   pos46: 絶対に &mo 系にしないこと（bootloaderアクセス可能になるバグ）
-//   pos44: &mt LCTL LANG2 → &l8_lt 8 LANG2 に変更（Ctrl冗長解消 + L8長押し安定化）
-//   pos48: &lt 8 BSPC → &kp BSPC に変更（L8経路廃止）
-//   pos24: &lt 8 L → &kp L に変更（エルゴルール違反解消）
+//   L9アクセス: pos48 RET長押し（右サム）+ pos25 MINUS長押しの2経路
+//   pos45: 絶対に &mo 系にしないこと（bootloaderアクセス可能になるバグ）
+//   pos44: &mt LALT LANG1 → &l8_lt 8 LANG1 に変更（L8アクセスをより押しやすい位置へ）
+//   pos43: &l8_lt 8 LANG2 → &kp LANG2 に変更（英数のみ、L8アクセス廃止）
+//   pos47: &lt 8 BSPC → &kp BSPC に変更（L8経路廃止）※旧変更
+//   pos24（旧番号）: &lt 8 L → &kp L に変更（エルゴルール違反解消）※旧変更
 // ============================================================
 
 / {
@@ -83,17 +85,17 @@
 
         // ============================================================
         // L0: Windows Base
-        //   pos44 = L8_LT(8, LANG2) : tap=英数  hold=L8(SymNum)
-        //   pos45 = MT(LALT, LANG1) : tap=かな  hold=Alt
-        //   pos46 = LT(1, SPACE)    : tap=Space hold=Win shortcuts
+        //   pos43 = LANG2              : tap=英数
+        //   pos44 = L8_LT(8, LANG1)   : tap=かな  hold=L8(SymNum)
+        //   pos45 = LT(1, SPACE)       : tap=Space hold=Win shortcuts
         // ============================================================
 
         layer_0 {
             bindings = <
-&lt 10 ESC  &kp Q     &kp W     &kp E           &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
-&kp TAB     &kp A     &kp S     &kp D           &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
-&kp LSHFT   &kp Z     &kp X     &kp C           &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-&kp LCTL    &kp LGUI  &kp LALT  &l8_lt 8 LANG2  &mt LALT LANG1  &lt 1 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
+&lt 10 ESC  &kp Q     &kp W     &kp E       &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
+&kp TAB     &kp A     &kp S     &kp D       &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
+&kp LSHFT   &kp Z     &kp X     &kp C       &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
+&kp LCTL    &kp LGUI  &kp LALT  &kp LANG2   &l8_lt 8 LANG1  &lt 1 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -126,17 +128,17 @@
         // ============================================================
         // L2: Mac Base
         //   col1/col2 = LALT/LGUI (Mac 配列)
-        //   pos44 = L8_LT(8, LANG2) : tap=英数  hold=L8(SymNum)
-        //   pos45 = MT(LALT, LANG1) : tap=かな  hold=Option
-        //   pos46 = LT(3, SPACE)    : tap=Space hold=Mac shortcuts
+        //   pos43 = LANG2              : tap=英数
+        //   pos44 = L8_LT(8, LANG1)   : tap=かな  hold=L8(SymNum)
+        //   pos45 = LT(3, SPACE)       : tap=Space hold=Mac shortcuts
         // ============================================================
 
         layer_2 {
             bindings = <
-&lt 10 ESC  &kp Q     &kp W     &kp E           &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
-&kp TAB     &kp A     &kp S     &kp D           &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
-&kp LSHFT   &kp Z     &kp X     &kp C           &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-&kp LCTL    &kp LALT  &kp LGUI  &l8_lt 8 LANG2  &mt LALT LANG1  &lt 3 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
+&lt 10 ESC  &kp Q     &kp W     &kp E       &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
+&kp TAB     &kp A     &kp S     &kp D       &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
+&kp LSHFT   &kp Z     &kp X     &kp C       &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
+&kp LCTL    &kp LALT  &kp LGUI  &kp LANG2   &l8_lt 8 LANG1  &lt 3 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -172,10 +174,10 @@
 
         layer_4 {
             bindings = <
-&lt 10 ESC  &kp Q     &kp W     &kp E           &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
-&kp TAB     &kp A     &kp S     &kp D           &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
-&kp LSHFT   &kp Z     &kp X     &kp C           &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-&kp LCTL    &kp LGUI  &kp LALT  &l8_lt 8 LANG2  &mt LALT LANG1  &lt 5 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
+&lt 10 ESC  &kp Q     &kp W     &kp E       &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
+&kp TAB     &kp A     &kp S     &kp D       &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
+&kp LSHFT   &kp Z     &kp X     &kp C       &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
+&kp LCTL    &kp LGUI  &kp LALT  &kp LANG2   &l8_lt 8 LANG1  &lt 5 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -213,10 +215,10 @@
 
         layer_6 {
             bindings = <
-&lt 10 ESC  &kp Q     &kp W     &kp E           &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
-&kp TAB     &kp A     &kp S     &kp D           &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
-&kp LSHFT   &kp Z     &kp X     &kp C           &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-&kp LCTL    &kp LALT  &kp LGUI  &l8_lt 8 LANG2  &mt LALT LANG1  &lt 7 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
+&lt 10 ESC  &kp Q     &kp W     &kp E       &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
+&kp TAB     &kp A     &kp S     &kp D       &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
+&kp LSHFT   &kp Z     &kp X     &kp C       &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
+&kp LCTL    &kp LALT  &kp LGUI  &kp LANG2   &l8_lt 8 LANG1  &lt 7 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -248,7 +250,7 @@
         // ============================================================
         // L8: SymNum - JIS layout adjusted
         //   左手 = 記号  右手 = テンキー
-        //   pos49 (右サム隣) = 0  ← トラックボール使用中も 0 入力可
+        //   pos48 (右サム隣) = 0  ← トラックボール使用中も 0 入力可
         //   OS側が日本語/JIS配列の前提
         //   L8 intended output on JIS:
         //   Row1: ! ` [ ] " '   * 7 8 9 /
