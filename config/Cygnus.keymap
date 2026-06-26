@@ -21,7 +21,7 @@
 //   45  LT(sub,SPC)   <- Spacetap / Subレイヤーhold
 //   46  RIGHT(->)
 //   47  BSPC          | 48  LT(9,RET) <- Entertap / L9hold
-//   49  DEL    | 50  RCTL
+//   49  RALT   | 50  RCTL
 //
 // 設計確定事項（2026-06-26更新）:
 //   L8アクセス: pos44 LANG1長押し（左サム）のみ <- エルゴルール準拠
@@ -95,7 +95,7 @@
 &lt 10 ESC  &kp Q     &kp W     &kp E       &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
 &kp TAB     &kp A     &kp S     &kp D       &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
 &kp LSHFT   &kp Z     &kp X     &kp C       &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-&kp LCTL    &kp LGUI  &kp LALT  &kp LANG2   &l8_lt 8 LANG1  &lt 1 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
+&kp LCTL    &kp LGUI  &kp LALT  &kp LANG2   &l8_lt 8 LANG1  &lt 1 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp RALT      &kp RCTL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -138,7 +138,7 @@
 &lt 10 ESC  &kp Q     &kp W     &kp E       &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
 &kp TAB     &kp A     &kp S     &kp D       &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
 &kp LSHFT   &kp Z     &kp X     &kp C       &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-&kp LCTL    &kp LALT  &kp LGUI  &kp LANG2   &l8_lt 8 LANG1  &lt 3 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
+&kp LCTL    &kp LALT  &kp LGUI  &kp LANG2   &l8_lt 8 LANG1  &lt 3 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp RALT      &kp RCTL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -177,7 +177,7 @@
 &lt 10 ESC  &kp Q     &kp W     &kp E       &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
 &kp TAB     &kp A     &kp S     &kp D       &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
 &kp LSHFT   &kp Z     &kp X     &kp C       &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-&kp LCTL    &kp LGUI  &kp LALT  &kp LANG2   &l8_lt 8 LANG1  &lt 5 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
+&kp LCTL    &kp LGUI  &kp LALT  &kp LANG2   &l8_lt 8 LANG1  &lt 5 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp RALT      &kp RCTL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -218,7 +218,7 @@
 &lt 10 ESC  &kp Q     &kp W     &kp E       &kp R           &kp T                               &kp Y      &kp U  &kp I      &kp O    &kp P        &kp BSPC
 &kp TAB     &kp A     &kp S     &kp D       &kp F           &kp G        &mkp MCLK    &kp UP    &kp H      &kp J  &kp K      &kp L    &lt 9 MINUS  &kp RET
 &kp LSHFT   &kp Z     &kp X     &kp C       &kp V           &kp B        &kp DEL      &kp DOWN  &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-&kp LCTL    &kp LALT  &kp LGUI  &kp LANG2   &l8_lt 8 LANG1  &lt 7 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp DEL      &kp RCTL
+&kp LCTL    &kp LALT  &kp LGUI  &kp LANG2   &l8_lt 8 LANG1  &lt 7 SPACE  &kp RIGHT    &kp BSPC  &lt 9 RET                             &kp RALT      &kp RCTL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -274,21 +274,24 @@
         };
 
         // ============================================================
-        // L9: Nav/Func
+        // L9: Nav/Func  (オートマウス移行先レイヤー)
         //   Row1 = F1–F12
-        //   左手 F/C/V/B = ↑/←/↓/→  右手 J/K = マウス L/R クリック
-        //   エンコーダー = Premiere タイムラインズーム (+/-)
+        //   左手 F/C/V/B = ↑/←/↓/→
+        //   右手 H=MB3(中クリック)  J=LCLK  K=RCLK  L=Ctrl+W(タブ閉じる)
+        //   右手 M=MB4(戻る)  ,=MB5(進む)
+        //   RET(pos25) = &to 0  ← L9出口キー（L0に戻る）
+        //   エンコーダー = ページスクロール (PG_UP/PG_DN)
         // ============================================================
 
         layer_9 {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4    &kp F5    &kp F6                       &kp F7  &kp F8     &kp F9     &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans    &kp UP    &trans     &trans    &trans  &trans  &mkp LCLK  &mkp RCLK  &trans   &trans   &trans
-&trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &trans  &trans     &trans     &trans   &trans   &trans
+&trans  &trans  &trans  &trans    &kp UP    &trans     &trans    &mkp MB3  &trans  &mkp LCLK  &mkp RCLK  &kp LC(W)  &trans   &to 0
+&trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &trans  &mkp MB4   &mkp MB5   &trans   &trans   &trans
 &trans  &trans  &trans  &trans    &trans    &trans     &trans    &trans  &trans                                 &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp EQUAL MINUS>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
         };
 
         // ============================================================
