@@ -44,8 +44,8 @@ layers:
   - LCTL
   - LGUI
   - LALT
-  - {t: LANG2, h: '8'}
-  - {t: LANG1, h: LALT}
+  - LANG2
+  - {t: LANG1, h: '8'}
   - {t: SPACE, h: '1'}
   - RIGHT
   - BSPC
@@ -148,8 +148,8 @@ layers:
   - LCTL
   - LALT
   - LGUI
-  - {t: LANG2, h: '8'}
-  - {t: LANG1, h: LALT}
+  - LANG2
+  - {t: LANG1, h: '8'}
   - {t: SPACE, h: '3'}
   - RIGHT
   - BSPC
@@ -252,8 +252,8 @@ layers:
   - LCTL
   - LGUI
   - LALT
-  - {t: LANG2, h: '8'}
-  - {t: LANG1, h: LALT}
+  - LANG2
+  - {t: LANG1, h: '8'}
   - {t: SPACE, h: '5'}
   - RIGHT
   - BSPC
@@ -356,8 +356,8 @@ layers:
   - LCTL
   - LALT
   - LGUI
-  - {t: LANG2, h: '8'}
-  - {t: LANG1, h: LALT}
+  - LANG2
+  - {t: LANG1, h: '8'}
   - {t: SPACE, h: '7'}
   - RIGHT
   - BSPC
@@ -460,8 +460,8 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
   - ''
+  - {type: held}
   - ''
   - ''
   - ''
