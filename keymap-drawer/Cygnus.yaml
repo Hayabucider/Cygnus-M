@@ -50,7 +50,7 @@ layers:
   - RIGHT
   - BSPC
   - {t: RET, h: '9'}
-  - DEL
+  - RALT
   - RCTL
   '1':
   - {t: ▽, type: trans}
@@ -154,7 +154,7 @@ layers:
   - RIGHT
   - BSPC
   - {t: RET, h: '9'}
-  - DEL
+  - RALT
   - RCTL
   '3':
   - {t: ▽, type: trans}
@@ -258,7 +258,7 @@ layers:
   - RIGHT
   - BSPC
   - {t: RET, h: '9'}
-  - DEL
+  - RALT
   - RCTL
   '5':
   - {t: ▽, type: trans}
@@ -362,7 +362,7 @@ layers:
   - RIGHT
   - BSPC
   - {t: RET, h: '9'}
-  - DEL
+  - RALT
   - RCTL
   '7':
   - {t: ▽, type: trans}
@@ -488,13 +488,13 @@ layers:
   - UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB3'
   - {t: ▽, type: trans}
   - '&mkp LCLK'
   - '&mkp RCLK'
-  - {t: ▽, type: trans}
+  - Ctl+W
   - {type: held}
-  - {t: ▽, type: trans}
+  - {t: '0', h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -504,8 +504,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mkp MB5'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
